@@ -1,0 +1,6 @@
+INSERT INTO t_projeto (cd_projeto, sg_projeto, ds_projeto) VALUES 
+('P1', 'KOL', 'Projeto A'),
+('P2', 'XYZ', 'Projeto B'),
+('P3', 'LMN', 'Projeto C'),
+('P4', 'QWE', 'Projeto D'),
+('P5', 'RTY', 'Projeto E');

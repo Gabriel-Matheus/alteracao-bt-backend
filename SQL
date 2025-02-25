@@ -1,0 +1,13 @@
+ALTER TABLE t_projeto
+ADD randomprojeto VARCHAR(10);
+
+TRUNCATE TABLE t_projeto;
+
+INSERT INTO t_projeto (cd_projeto, sg_projeto, ds_projeto, randomprojeto) VALUES 
+('P1', 'KOL', 'Projeto A', 'ada'),
+('P2', 'XYZ', 'Projeto B', 'ada2'),
+('P3', 'LMN', 'Projeto C', 'ada4'),
+('P4', 'QWE', 'Projeto D', 'ada5'),
+('P5', 'RTY', 'Projeto E', 'ada6');
+
+select * from t_projeto

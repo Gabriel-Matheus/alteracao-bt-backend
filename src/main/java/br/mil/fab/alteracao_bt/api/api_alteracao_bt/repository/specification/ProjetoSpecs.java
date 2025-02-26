@@ -17,4 +17,5 @@ public class ProjetoSpecs {
         return (root, query, cb) -> cb.equal(root.get("dsProjeto"), dsProjeto);
     }
 
+
 }

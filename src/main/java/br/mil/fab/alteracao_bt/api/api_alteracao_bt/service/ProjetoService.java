@@ -25,15 +25,12 @@ public class ProjetoService {
 
 
     public List<Projeto> searchByCdProjetoSpecs(String cdProjeto){
-
         Specification<Projeto> specs = Specification.where((root, query, cb) -> cb.conjunction() );
-
         if(cdProjeto != null) {
             specs = specs.and(cdProjetoEqual(cdProjeto));
         } else{
             //tratar erro
         }
-
         return projetoRepository.findAll(specs);
     }
 
@@ -44,7 +41,6 @@ public class ProjetoService {
         if (sgProjeto != null && !sgProjeto.isEmpty()) {
             specs = specs.and(ProjetoSpecs.sgProjetoEqual(sgProjeto));
         }
-
         return projetoRepository.findAll(specs);
     }
 
@@ -52,4 +48,7 @@ public class ProjetoService {
         return projetoRepository.findById(id).orElse(null);
     }
 
+    public List<Projeto> findAll(){
+        return projetoRepository.findAll();
+    }
 }

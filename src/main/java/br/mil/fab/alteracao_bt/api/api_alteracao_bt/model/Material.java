@@ -14,16 +14,16 @@ import lombok.Setter;
 public class Material {
 
     @Id
-    @Column(name = "cd_projeto", length = 2, nullable = false)
+    @Column(name = "cd_material", length = 2, nullable = false)
+    private String cdMaterial;
+
+     /* colocar tamanho e propriedades (não foi possível devido a falta de acesso ao db) */
+    @Column(name = "cd_projeto", length =  50, nullable = false)
     private String cdProjeto;
 
      /* colocar tamanho e propriedades (não foi possível devido a falta de acesso ao db) */
-    @Column(name = "sg_projeto", length =  50, nullable = false)
-    private String sgProjeto;
-
-     /* colocar tamanho e propriedades (não foi possível devido a falta de acesso ao db) */
-    @Column(name = "ds_projeto", length = 50, nullable = false)
-    private String dsProjeto;
+    @Column(name = "nr_pn", length = 50, nullable = false)
+    private String NrPn;
 }
 
     /*

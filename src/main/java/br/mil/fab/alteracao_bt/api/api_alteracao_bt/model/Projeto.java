@@ -30,6 +30,10 @@ public class Projeto{
      /* colocar tamanho e propriedades (não foi possível devido a falta de acesso ao db) */
     @Column(name = "ds_projeto", length = 50, nullable = false)
     private String dsProjeto;
+
+    @OneToMany(mappedBy = "projeto", cascade = CascadeType.ALL)
+    private List<Tarefa> tarefas;
+
 }
 
     /*

@@ -1,7 +1,11 @@
 package br.mil.fab.alteracao_bt.api.api_alteracao_bt.controller;
 
+import br.mil.fab.alteracao_bt.api.api_alteracao_bt.model.Material;
 import br.mil.fab.alteracao_bt.api.api_alteracao_bt.model.Projeto;
+import br.mil.fab.alteracao_bt.api.api_alteracao_bt.model.Tarefa;
+import br.mil.fab.alteracao_bt.api.api_alteracao_bt.repository.MaterialRepository;
 import br.mil.fab.alteracao_bt.api.api_alteracao_bt.repository.ProjetoRepository;
+import br.mil.fab.alteracao_bt.api.api_alteracao_bt.repository.TarefaRepository;
 import br.mil.fab.alteracao_bt.api.api_alteracao_bt.service.ProjetoService;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,13 +29,34 @@ public class TelaRequisicaoController {
     @Autowired
     ProjetoRepository projetoRepository;
 
+    @Autowired
+    TarefaRepository tarefaRepository;
+
+    @Autowired
+    MaterialRepository materialRepository;
+
     @GetMapping()
     public List<Projeto> getProjeto() {
         return projetoService.findAll();
     }
 
     @GetMapping("/query")
-    public List<Projeto> listarProjetoQuery() {
-        return projetoRepository.listarProjetos();
+    public List<Tarefa> listarTarefaQuery(){
+        return tarefaRepository.findAll();
     }
-}
+
+    @GetMapping("/query2")
+    public List<Material> listarMaterialQuery(){
+        return materialRepository.findAll();
+    }
+
+
+    /*
+    @GetMapping("/")
+    public List<Projeto> listarProjetoQuery() {
+        return projetoRepository.listarProjetos();*/
+    }
+
+
+
+

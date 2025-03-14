@@ -46,10 +46,9 @@ public class TelaRequisicaoController {
     }
 
     @GetMapping("/query2")
-    public List<Material> listarMaterialQuery(){
-        return materialRepository.findAll();
+    public List<Material> findMateriaisByProjeto(){
+        return materialRepository.findMateriaisByProjeto("4R");
     }
-
 
     /*
     @GetMapping("/")

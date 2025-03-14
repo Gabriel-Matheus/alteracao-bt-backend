@@ -1,5 +1,6 @@
 package br.mil.fab.alteracao_bt.api.api_alteracao_bt.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -21,6 +22,7 @@ public class Material {
     private String NrPn;
 
     @OneToMany(mappedBy = "material", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Tarefa> tarefas;
 }
 

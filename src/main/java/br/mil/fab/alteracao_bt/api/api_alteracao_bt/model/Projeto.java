@@ -1,5 +1,6 @@
 package br.mil.fab.alteracao_bt.api.api_alteracao_bt.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
@@ -34,25 +35,7 @@ public class Projeto{
     private String dsProjeto;
 
     @OneToMany(mappedBy = "projeto", cascade = CascadeType.ALL)
-    private List<Tarefa> tarefas;
+    @JsonIgnore
+    private List<Tarefa> tarefa;
 
 }
-
-    /*
-    @OneToMany(mappedBy = "autor", fetch = FetchType.LAZY
-//            , cascade = CascadeType.ALL
-    )
-    private List<Livro> livros;
-
-    @CreatedDate
-    @Column(name = "data_cadastro")
-    private LocalDateTime dataCadastro;
-
-    @LastModifiedDate
-    @Column(name = "data_atualizacao")
-    private LocalDateTime dataAtualizacao;
-
-    @ManyToOne
-    @JoinColumn(name = "id_usuario")
-    private Usuario usuario;
-}*/

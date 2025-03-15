@@ -14,14 +14,6 @@ public class ProjetoService {
     @Autowired
     ProjetoRepository projetoRepository;
 
-    public Projeto searchBySgProjeto(String sgProjeto){
-        Optional<Projeto> projeto = projetoRepository.findBySgProjeto(sgProjeto);
-        return projeto.orElse(null);
-    }
-
-    public Projeto searchById(String id){
-        return projetoRepository.findById(id).orElse(null);
-    }
 
     public List<Projeto> findAll(){
         return projetoRepository.findAll();

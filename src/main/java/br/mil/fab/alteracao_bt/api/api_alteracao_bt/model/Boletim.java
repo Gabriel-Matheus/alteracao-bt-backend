@@ -1,46 +1,43 @@
 package br.mil.fab.alteracao_bt.api.api_alteracao_bt.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import br.mil.fab.alteracao_bt.api.api_alteracao_bt.repository.MaterialRepository;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
-@Table(name = "t_projeto")
+@Table(name = "t_bt_boletim")
 @Getter
 @Setter
 public class Boletim {
 
     @Id
-    @Column(name = "cd_projeto", length = 2, nullable = false)
-    private String cdProjeto;
+    @Column(name = "id_boletim", length = 2, nullable = false)
+    private String idBoletim;
 
-     /* colocar tamanho e propriedades (não foi possível devido a falta de acesso ao db) */
-    @Column(name = "sg_projeto", length =  50, nullable = false)
-    private String sgProjeto;
+    @Column(name = "nr_boletim", length = 2, nullable = false)
+    private String nrBoletim;
 
-     /* colocar tamanho e propriedades (não foi possível devido a falta de acesso ao db) */
-    @Column(name = "ds_projeto", length = 50, nullable = false)
-    private String dsProjeto;
-}
+     //colocar tamanho e propriedades (não foi possível devido a falta de acesso ao db)
+    @Column(name = "cd_material", length =  50, nullable = false, insertable = false, updatable = false)
+    private String cdMaterial;
 
-    /*
-    @OneToMany(mappedBy = "autor", fetch = FetchType.LAZY
-//            , cascade = CascadeType.ALL
-    )
-    private List<Livro> livros;
+     //colocar tamanho e propriedades (não foi possível devido a falta de acesso ao db)
+    @Column(name = "dt_insert", length = 50, nullable = false)
+    private String dtInsert;
 
-    @CreatedDate
-    @Column(name = "data_cadastro")
-    private LocalDateTime dataCadastro;
+    @Column(name = "nr_revisao", length = 3, nullable = false)
+    private String nrRevisao;
 
-    @LastModifiedDate
-    @Column(name = "data_atualizacao")
-    private LocalDateTime dataAtualizacao;
+    @Column(name = "dt_revisao", length = 30, nullable = false)
+    private String dtRevisao;
 
     @ManyToOne
-    @JoinColumn(name = "id_usuario")
-    private Usuario usuario;
-}*/
+    @JoinColumn(name = "cd_material", referencedColumnName = "cd_material")
+    @JsonIgnore
+    private Material material;
+
+}

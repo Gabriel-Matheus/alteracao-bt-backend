@@ -20,12 +20,12 @@ public interface ProjetoRepository extends JpaRepository<Projeto, String> {
     @Query(value = "SELECT * FROM t_projeto p " +
             "WHERE p.cd_projeto = :cdProjeto",
             nativeQuery = true)
-    List<Projeto> findProjetosByCdProjeto(@Param("cdProjeto") String cdProjeto);
+    List<Projeto> findByCdProjeto(@Param("cdProjeto") String cdProjeto);
 
     @Query(value = "SELECT * FROM t_projeto p " +
             "WHERE p.sg_projeto = :sgProjeto",
              nativeQuery = true)
-    List<Projeto> findProjetosBySgProjeto(@Param("sgProjeto") String sgProjeto);
+    List<Projeto> findBySgProjeto(@Param("sgProjeto") String sgProjeto);
 
 
 }

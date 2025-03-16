@@ -17,7 +17,6 @@ public class Material {
     @Column(name = "cd_material", length = 2, nullable = false, insertable = false, updatable = false)
     private String cdMaterial;
 
-    //colocar tamanho e propriedades (não foi possível devido a falta de acesso ao db)
     @Column(name = "nr_pn", length = 50, nullable = false)
     private String NrPn;
 

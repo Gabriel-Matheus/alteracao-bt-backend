@@ -9,6 +9,4 @@ import java.util.List;
 
 public interface TarefaRepository extends JpaRepository<Tarefa, String> {
 
-    @Query(value = "SELECT * FROM t_tarefa ", nativeQuery = true)
-    List<Tarefa> listarTarefas();
 }

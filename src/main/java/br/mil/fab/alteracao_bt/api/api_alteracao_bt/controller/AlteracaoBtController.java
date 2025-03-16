@@ -3,10 +3,8 @@ package br.mil.fab.alteracao_bt.api.api_alteracao_bt.controller;
 import br.mil.fab.alteracao_bt.api.api_alteracao_bt.model.Boletim;
 import br.mil.fab.alteracao_bt.api.api_alteracao_bt.model.Material;
 import br.mil.fab.alteracao_bt.api.api_alteracao_bt.model.Projeto;
-import br.mil.fab.alteracao_bt.api.api_alteracao_bt.repository.BoletimRepository;
-import br.mil.fab.alteracao_bt.api.api_alteracao_bt.repository.MaterialRepository;
-import br.mil.fab.alteracao_bt.api.api_alteracao_bt.repository.ProjetoRepository;
-import br.mil.fab.alteracao_bt.api.api_alteracao_bt.repository.TarefaRepository;
+import br.mil.fab.alteracao_bt.api.api_alteracao_bt.service.BoletimService;
+import br.mil.fab.alteracao_bt.api.api_alteracao_bt.service.MaterialService;
 import br.mil.fab.alteracao_bt.api.api_alteracao_bt.service.ProjetoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -22,16 +20,10 @@ public class AlteracaoBtController {
     ProjetoService projetoService;
 
     @Autowired
-    ProjetoRepository projetoRepository;
+    private MaterialService materialService;
 
     @Autowired
-    TarefaRepository tarefaRepository;
-
-    @Autowired
-    MaterialRepository materialRepository;
-
-    @Autowired
-    BoletimRepository boletimRepository;
+    private BoletimService boletimService;
 
 
     @GetMapping()
@@ -41,22 +33,22 @@ public class AlteracaoBtController {
 
     @GetMapping("/buscar-materiais")
     public List<Material> getMateriaisByCdProjeto(@RequestParam("cdProjeto") String cdProjeto) {
-        return materialRepository.findMateriaisByProjeto(cdProjeto);
+        return materialService.findByCdProjeto(cdProjeto);
     }
 
     @GetMapping("/buscar-projetos-por-cd")
     public List<Projeto> getProjetoByCdProjeto(@RequestParam("cdProjeto") String cdProjeto) {
-        return projetoRepository.findProjetosByCdProjeto(cdProjeto);
+        return projetoService.findByCdProjeto(cdProjeto);
     }
 
     @GetMapping("/buscar-projetos-por-sg")
     public List<Projeto> getProjetoBySgProjeto(@RequestParam("sgProjeto") String sgProjeto) {
-        return projetoRepository.findProjetosBySgProjeto(sgProjeto);
+        return projetoService.findBySgProjeto(sgProjeto);
     }
 
-    @GetMapping("buscar-boletins")
+    @GetMapping("/buscar-boletins")
     public List<Boletim> getBoletimByCdMaterial(@RequestParam("cdMaterial") String cdMaterial) {
-        return boletimRepository.findBoletimByCdMaterial(cdMaterial);
+        return boletimService.findByCdMaterial(cdMaterial);
     }
 
 

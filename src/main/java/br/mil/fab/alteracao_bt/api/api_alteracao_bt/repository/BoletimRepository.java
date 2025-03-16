@@ -13,5 +13,6 @@ public interface BoletimRepository extends JpaRepository<Boletim, String> {
     @Query(value = "SELECT * FROM t_bt_boletim b " +
             "WHERE b.cd_material = :cdMaterial",
             nativeQuery = true)
-    List<Boletim> findBoletimByCdMaterial(@Param("cdMaterial") String cdMaterial);
+    List<Boletim> findByCdMaterial(@Param("cdMaterial") String cdMaterial);
+
 }

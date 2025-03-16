@@ -8,10 +8,10 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "usuario")
+@Table(name = "userdb")
 @Getter
 @Setter
-public class Usuario {
+public class User {
 
     @Column(name = "usuario")
     @Id

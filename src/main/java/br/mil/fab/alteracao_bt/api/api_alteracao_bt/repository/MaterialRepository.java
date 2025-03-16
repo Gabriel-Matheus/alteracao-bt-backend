@@ -12,14 +12,11 @@ import java.util.List;
 @Repository
 public interface MaterialRepository extends JpaRepository<Material, String> {
 
-    @Query(value = "SELECT * FROM t_material ", nativeQuery = true)
-    List<Tarefa> listarTarefas();
-
     @Query(value = "SELECT DISTINCT m.* FROM t_material m " +
             "JOIN t_tarefa t ON m.cd_material = t.cd_material " +
             "JOIN t_projeto p ON t.cd_projeto = p.cd_projeto " +
             "WHERE p.cd_projeto = :cdProjeto",
             nativeQuery = true)
-    List<Material> findMateriaisByProjeto(@Param("cdProjeto") String cdProjeto);
+    List<Material> findByCdProjeto(@Param("cdProjeto") String cdProjeto);
 
 }

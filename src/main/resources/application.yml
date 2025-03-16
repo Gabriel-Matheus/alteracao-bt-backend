@@ -24,10 +24,10 @@ spring:
                         classpath:db/schema/schema_t_projeto.sql,
                         classpath:db/schema/schema_t_tarefa.sql,
                         classpath:db/schema/schema_t_material.sql,
-                        classpath:db/schema/schema_login.sql
+                        classpath:db/schema/schema_userdb.sql
       data-locations: classpath:db/data/data_t_bt_boletim.sql, 
                       classpath:db/data/data_t_projeto.sql, 
                       classpath:db/data/data_t_tarefa.sql,
                       classpath:db/data/data_t_material.sql,
-                      classpath:db/data/data_login.sql
+                      classpath:db/data/data_userdb.sql
       mode: always

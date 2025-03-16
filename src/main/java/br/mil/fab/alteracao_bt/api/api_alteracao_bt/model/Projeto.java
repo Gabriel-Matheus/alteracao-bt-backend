@@ -26,11 +26,9 @@ public class Projeto{
     @Column(name = "cd_projeto", length = 2, nullable = false)
     private String cdProjeto;
 
-     /* colocar tamanho e propriedades (não foi possível devido a falta de acesso ao db) */
     @Column(name = "sg_projeto", length =  50, nullable = false)
     private String sgProjeto;
 
-     /* colocar tamanho e propriedades (não foi possível devido a falta de acesso ao db) */
     @Column(name = "ds_projeto", length = 50, nullable = false)
     private String dsProjeto;
 

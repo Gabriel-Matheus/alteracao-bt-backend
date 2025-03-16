@@ -1,4 +1,4 @@
-INSERT INTO usuario (usuario, senha) VALUES
+INSERT INTO userdb (usuario, senha) VALUES
                                        ('joão', 'password'),
                                        ('maria', 'password'),
                                        ('carlos', 'password'),

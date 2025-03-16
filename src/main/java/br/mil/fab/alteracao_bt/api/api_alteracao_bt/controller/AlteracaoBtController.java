@@ -3,27 +3,20 @@ package br.mil.fab.alteracao_bt.api.api_alteracao_bt.controller;
 import br.mil.fab.alteracao_bt.api.api_alteracao_bt.model.Boletim;
 import br.mil.fab.alteracao_bt.api.api_alteracao_bt.model.Material;
 import br.mil.fab.alteracao_bt.api.api_alteracao_bt.model.Projeto;
-import br.mil.fab.alteracao_bt.api.api_alteracao_bt.model.Tarefa;
 import br.mil.fab.alteracao_bt.api.api_alteracao_bt.repository.BoletimRepository;
 import br.mil.fab.alteracao_bt.api.api_alteracao_bt.repository.MaterialRepository;
 import br.mil.fab.alteracao_bt.api.api_alteracao_bt.repository.ProjetoRepository;
 import br.mil.fab.alteracao_bt.api.api_alteracao_bt.repository.TarefaRepository;
 import br.mil.fab.alteracao_bt.api.api_alteracao_bt.service.ProjetoService;
-import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping
 @CrossOrigin(origins = "*")
-public class TelaRequisicaoController {
+public class AlteracaoBtController {
 
     @Autowired
     ProjetoService projetoService;
@@ -39,6 +32,7 @@ public class TelaRequisicaoController {
 
     @Autowired
     BoletimRepository boletimRepository;
+
 
     @GetMapping()
     public List<Projeto> getProjeto() {

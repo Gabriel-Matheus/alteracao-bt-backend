@@ -1,7 +1,6 @@
 package br.mil.fab.alteracao_bt.api.api_alteracao_bt.repository;
 
-import br.mil.fab.alteracao_bt.api.api_alteracao_bt.model.Material;
-import br.mil.fab.alteracao_bt.api.api_alteracao_bt.model.Tarefa;
+import br.mil.fab.alteracao_bt.api.api_alteracao_bt.entity.Material;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

@@ -1,7 +1,6 @@
 package br.mil.fab.alteracao_bt.api.api_alteracao_bt.repository;
 
-import br.mil.fab.alteracao_bt.api.api_alteracao_bt.model.Boletim;
-import br.mil.fab.alteracao_bt.api.api_alteracao_bt.model.Projeto;
+import br.mil.fab.alteracao_bt.api.api_alteracao_bt.entity.Boletim;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

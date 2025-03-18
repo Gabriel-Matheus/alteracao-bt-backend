@@ -1,6 +1,6 @@
 package br.mil.fab.alteracao_bt.api.api_alteracao_bt.controller;
 
-import br.mil.fab.alteracao_bt.api.api_alteracao_bt.model.User;
+import br.mil.fab.alteracao_bt.api.api_alteracao_bt.entity.User;
 import br.mil.fab.alteracao_bt.api.api_alteracao_bt.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

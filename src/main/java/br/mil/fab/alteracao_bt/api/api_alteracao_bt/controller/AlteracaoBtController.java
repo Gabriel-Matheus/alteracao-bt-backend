@@ -1,8 +1,8 @@
 package br.mil.fab.alteracao_bt.api.api_alteracao_bt.controller;
 
-import br.mil.fab.alteracao_bt.api.api_alteracao_bt.model.Boletim;
-import br.mil.fab.alteracao_bt.api.api_alteracao_bt.model.Material;
-import br.mil.fab.alteracao_bt.api.api_alteracao_bt.model.Projeto;
+import br.mil.fab.alteracao_bt.api.api_alteracao_bt.entity.Boletim;
+import br.mil.fab.alteracao_bt.api.api_alteracao_bt.entity.Material;
+import br.mil.fab.alteracao_bt.api.api_alteracao_bt.entity.Projeto;
 import br.mil.fab.alteracao_bt.api.api_alteracao_bt.service.BoletimService;
 import br.mil.fab.alteracao_bt.api.api_alteracao_bt.service.MaterialService;
 import br.mil.fab.alteracao_bt.api.api_alteracao_bt.service.ProjetoService;

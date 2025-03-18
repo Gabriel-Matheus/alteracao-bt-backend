@@ -1,4 +1,4 @@
-package br.mil.fab.alteracao_bt.api.api_alteracao_bt.model;
+package br.mil.fab.alteracao_bt.api.api_alteracao_bt.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;

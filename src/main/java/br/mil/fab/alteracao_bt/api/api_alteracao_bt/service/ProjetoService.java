@@ -1,6 +1,6 @@
 package br.mil.fab.alteracao_bt.api.api_alteracao_bt.service;
 
-import br.mil.fab.alteracao_bt.api.api_alteracao_bt.model.Projeto;
+import br.mil.fab.alteracao_bt.api.api_alteracao_bt.entity.Projeto;
 import br.mil.fab.alteracao_bt.api.api_alteracao_bt.repository.ProjetoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
